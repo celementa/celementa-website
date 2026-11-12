@@ -32,6 +32,6 @@ find . -name '*.html' -not -path './tools/*' | while read -r f; do
   prefix=""
   for ((i=0; i<depth; i++)); do prefix="../$prefix"; done
   [ "$f" = "./404.html" ] && prefix="/"
-  sed -i.bak -E "/og:image/s#https://framerusercontent\.com/images/#https://celementa.com/assets/img/#g; /og:image/!s#https://framerusercontent\.com/images/#${prefix}assets/img/#g" "$f" && rm -f "$f.bak"
+  sed -i.bak -E "/og:image|twitter:image|\"logo\"/s#https://framerusercontent\.com/images/#https://celementa.com/assets/img/#g; /og:image|twitter:image|\"logo\"/!s#https://framerusercontent\.com/images/#${prefix}assets/img/#g" "$f" && rm -f "$f.bak"
 done
 echo "Done — all pages now use local images in assets/img/."

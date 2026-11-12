@@ -87,7 +87,8 @@ if (form) {
       msg.textContent = "Thank you! Your message has been sent — we'll get back to you shortly.";
       msg.className = "form-msg ok";
     } catch (e) {
-      msg.textContent = "Sorry, something went wrong. Please email us at info@celementa.com.";
+      console.error("Contact form:", e.message); // e.g. FormSubmit "needs activation"
+      msg.textContent = "Sorry, something went wrong. Please email us at sergei@celementa.com.";
       msg.className = "form-msg err";
     } finally {
       btn.disabled = false; btn.textContent = "Submit";
