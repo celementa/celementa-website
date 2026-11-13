@@ -4,7 +4,7 @@
    FORM SETTINGS: change these two lines if you ever need to.
    Form submissions are delivered by FormSubmit.co (free).
    ============================================================ */
-const FORM_EMAIL   = "sergei@celementa.com";
+const FORM_EMAIL   = "4f427f8d0ebc8264a8394ee871c5f904";
 const FORM_SUBJECT = "RE [Form Celementa website]";
 
 /* Header: solid background once you scroll, mobile menu */
